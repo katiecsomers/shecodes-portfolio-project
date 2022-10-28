@@ -4,6 +4,9 @@ font-family: 'Playfair Display', serif; */
 :root {
 	--background-color: #a3c6c4;
 	--accent-color: #f49d37;
+	--deeper-blue: #4d7298;
+	--space-grey: #42555c;
+	--deep-grey: #37371f;
 	--header-font: "Playfair Display", serif;
 	--regular-font: Georgia, "Times New Roman", Times, serif;
 }
@@ -21,6 +24,17 @@ h2 {
 	font-size: 25px;
 	text-align: center;
 }
+nav {
+	border-bottom: 1px solid var(--deeper-blue);
+}
+.navbar-custom {
+	background-color: var(--space-grey);
+}
+
+.navbar-custom .navbar-brand,
+.nav-link {
+	color: whitesmoke;
+}
 
 .cartoon-computer {
 	position: relative;
@@ -33,15 +47,34 @@ h2 {
 }
 
 .btn-contact {
-	background-color: #42555c;
+	background-color: var(--space-grey);
 	color: whitesmoke;
 	margin: 10px;
-	border: 1px solid #42555c;
+	border: 1px solid var(--space-grey);
 }
 .btn-contact:hover {
-	border: 1px solid #42555c;
-	background-color: #4d7298;
+	border: 1px solid var(--space-grey);
+	background-color: var(--deep-grey);
 	color: whitesmoke;
+}
+
+.gallery img {
+	background-color: var(--space-grey);
+	padding: 5px;
+	transition: all 200ms ease;
+}
+.gallery .img-1:hover {
+	transform: translateX(100px) translateY(-50px) scale(2);
+}
+
+.gallery .img-2:hover {
+	transform: translateX(50px) translateY(-50px) scale(2);
+}
+.gallery .img-3:hover {
+	transform: translateX(-50px) translateY(-50px) scale(2);
+}
+.gallery .img-4:hover {
+	transform: translateX(-100px) translateY(-50px) scale(2);
 }
 
 footer {
@@ -50,4 +83,27 @@ footer {
 footer i {
 	margin: 5px;
 	color: black;
+}
+
+@media (max-width: 900px) {
+	.gallery img {
+		display: flex;
+		margin: 10px;
+	}
+
+	.gallery .img-1:hover {
+		transform: none;
+	}
+	.gallery .img-2:hover {
+		transform: none;
+	}
+	.gallery .img-3:hover {
+		transform: none;
+	}
+	.gallery .img-4:hover {
+		transform: none;
+	}
+	.cartoon-computer {
+		position: static;
+	}
 }
