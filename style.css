@@ -14,10 +14,15 @@ body {
 	margin-top: 100px;
 	font-family: var(--regular-font);
 }
-
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--header-font);
 }
+
 h2 {
 	font-size: 25px;
 	text-align: center;
@@ -45,11 +50,12 @@ nav {
 
 .cartoon-computer {
 	position: relative;
-	top: 45px;
+
 	left: 40px;
 }
 
-.header {
+.header,
+.personal-blurb {
 	margin-bottom: 100px;
 	margin-top: 50px;
 	padding-top: 40px;
@@ -58,6 +64,9 @@ nav {
 	border-radius: 4px;
 }
 
+.personal-photo {
+	border-radius: 125px 25px 125px 25px / 100px 50px 100px 50px;
+}
 .btn-contact {
 	background-color: var(--space-grey);
 	color: whitesmoke;
@@ -91,12 +100,19 @@ nav {
 
 .launch-links {
 	display: flex;
-	justify-content: start;
 	border-radius: 4px;
-	padding: 10px 15px;
+	padding: 15px 20px;
 	text-decoration: none;
 	text-transform: capitalize;
-	background: var(--space-grey);
+	background-color: var(--space-grey);
+	color: whitesmoke;
+	border: 1px solid var(--space-grey);
+	margin: 10px;
+}
+
+.launch-links:hover {
+	border: 1px solid var(--space-grey);
+	background-color: var(--deep-grey);
 	color: whitesmoke;
 }
 
@@ -105,8 +121,7 @@ nav {
 }
 
 footer {
-	margin-left: 10px;
-	margin-top: 50px;
+	margin: 50px 20px;
 }
 footer i {
 	margin: 5px;
@@ -120,7 +135,7 @@ footer i {
 	}
 
 	.header {
-		margin-bottom: 0;
+		margin-bottom: 20px;
 	}
 
 	.gallery .img-1:hover {
