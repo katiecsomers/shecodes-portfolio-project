@@ -1,3 +1,41 @@
+/* font-family: 'Noto Serif', serif;
+font-family: 'Playfair Display', serif; */
+
+:root {
+	--background-color: #a3c6c4;
+	--accent-color: #f49d37;
+}
+
 body {
-	background-color: salmon;
+	background-color: var(--background-color);
+	margin-top: 100px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+	font-family: "Playfair Display", serif;
+}
+h2 {
+	font-size: 25px;
+	text-align: center;
+}
+
+.cartoon-computer {
+	position: relative;
+	top: 30px;
+	left: 40px;
+}
+
+.btn-contact {
+	background-color: #42555c;
+	color: whitesmoke;
+	margin: 10px;
+}
+
+footer {
+	margin-left: 10px;
+}
+footer i {
+	margin: 5px;
+	color: black;
 }
