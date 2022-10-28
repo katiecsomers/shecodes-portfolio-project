@@ -4,16 +4,18 @@ font-family: 'Playfair Display', serif; */
 :root {
 	--background-color: #a3c6c4;
 	--accent-color: #f49d37;
+	--header-font: "Playfair Display", serif;
+	--regular-font: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
 	background-color: var(--background-color);
 	margin-top: 100px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: var(--regular-font);
 }
 
 h1 {
-	font-family: "Playfair Display", serif;
+	font-family: var(--header-font);
 }
 h2 {
 	font-size: 25px;
@@ -26,10 +28,20 @@ h2 {
 	left: 40px;
 }
 
+.header {
+	margin-bottom: 150px;
+}
+
 .btn-contact {
 	background-color: #42555c;
 	color: whitesmoke;
 	margin: 10px;
+	border: 1px solid #42555c;
+}
+.btn-contact:hover {
+	border: 1px solid #42555c;
+	background-color: #4d7298;
+	color: whitesmoke;
 }
 
 footer {
