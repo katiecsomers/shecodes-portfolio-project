@@ -94,9 +94,10 @@ nav {
 	transform: translateX(-100px) translateY(-50px) scale(2);
 }
 
-#weather-blurb,
-#world-clock-blurb,
-#hobby-project-blurb {
+.weather-app,
+.world-clock,
+.hobby-project-blurb,
+.passion-project-blurb {
 	background: var(--lighter-background-color);
 }
 
@@ -123,8 +124,16 @@ nav {
 	padding: 3px;
 }
 
+.contact-details a,
 .contact-details h4 {
 	font-family: var(--regular-font);
+	text-decoration: none;
+	color: black;
+	transition: all 150ms ease-in-out;
+}
+
+.contact-details a:hover {
+	color: var(--space-grey);
 }
 
 footer {
