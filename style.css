@@ -28,10 +28,6 @@ h2 {
 	text-align: center;
 }
 
-h4 {
-	font-style: italic;
-	font-weight: bold;
-}
 nav {
 	border-bottom: 1px solid var(--deeper-blue);
 }
@@ -50,7 +46,6 @@ nav {
 
 .cartoon-computer {
 	position: relative;
-
 	left: 40px;
 }
 
@@ -61,7 +56,8 @@ nav {
 	padding-top: 40px;
 	padding-bottom: 40px;
 	background-color: var(--lighter-background-color);
-	border-radius: 4px;
+	border-radius: 2px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .personal-photo {
@@ -81,7 +77,7 @@ nav {
 
 .gallery img {
 	background-color: var(--space-grey);
-	padding: 5px;
+	padding: 3px;
 	transition: all 400ms ease-in-out;
 }
 .gallery .img-1:hover {
@@ -98,6 +94,12 @@ nav {
 	transform: translateX(-100px) translateY(-50px) scale(2);
 }
 
+#weather-blurb,
+#world-clock-blurb,
+#hobby-project-blurb {
+	background: var(--lighter-background-color);
+}
+
 .launch-links {
 	display: flex;
 	border-radius: 4px;
@@ -107,7 +109,7 @@ nav {
 	background-color: var(--space-grey);
 	color: whitesmoke;
 	border: 1px solid var(--space-grey);
-	margin: 10px;
+	transition: all 150ms ease-in-out;
 }
 
 .launch-links:hover {
@@ -118,14 +120,23 @@ nav {
 
 .blurb-image img {
 	background-color: var(--space-grey);
+	padding: 3px;
+}
+
+.contact-details h4 {
+	font-family: var(--regular-font);
 }
 
 footer {
 	margin: 50px 20px;
+	border-top: 1px solid var(--deeper-blue);
+	padding-top: 20px;
 }
+
 footer i {
-	margin: 5px;
+	margin: 10px;
 	color: black;
+	font-size: 20px;
 }
 
 @media (max-width: 1000px) {
