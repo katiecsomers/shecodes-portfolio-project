@@ -1,16 +1,15 @@
 :root {
-	--background-color: #a3c6c4;
+	--main-background-color: #f1eeed;
+	--container-background-color: #a3c6c4;
 	--lighter-background-color: #c0d8d7;
-	--accent-color: #f49d37;
 	--deeper-blue: #4d7298;
 	--space-grey: #42555c;
-	--deep-grey: #37371f;
 	--header-font: "Playfair Display", serif;
 	--regular-font: Georgia, "Times New Roman", Times, serif;
 }
 
 body {
-	background-color: var(--background-color);
+	background-color: var(--main-background-color);
 	margin-top: 100px;
 	font-family: var(--regular-font);
 }
@@ -21,6 +20,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--header-font);
+	font-weight: bold;
 }
 
 h2 {
@@ -41,7 +41,11 @@ nav {
 .navbar-toggler-icon,
 .navbar-collapse,
 .navbar-nav {
-	color: whitesmoke;
+	color: var(--main-background-color);
+}
+
+.nav-item a:hover {
+	color: var(--container-background-color);
 }
 
 .cartoon-computer {
@@ -51,12 +55,11 @@ nav {
 
 .header,
 .personal-blurb {
-	margin-bottom: 100px;
-	margin-top: 50px;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	margin: 50px auto;
+	padding: 40px 100px;
 	background-color: var(--lighter-background-color);
-	border-radius: 2px;
+	border: 1px solid var(--container-background-color);
+	border-radius: 4px;
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -65,18 +68,18 @@ nav {
 }
 .btn-contact {
 	background-color: var(--space-grey);
-	color: whitesmoke;
+	color: var(--main-background-color);
 	margin: 10px;
-	border: 1px solid var(--space-grey);
+	border: 1px solid var(--deeper-blue);
 }
 .btn-contact:hover {
 	border: 1px solid var(--space-grey);
-	background-color: var(--deep-grey);
-	color: whitesmoke;
+	background-color: var(--lighter-background-color);
+	color: black;
 }
 
 .gallery img {
-	background-color: var(--space-grey);
+	background-color: var(--container-background-color);
 	padding: 3px;
 	transition: all 400ms ease-in-out;
 }
@@ -99,46 +102,77 @@ nav {
 .hobby-project-blurb,
 .passion-project-blurb {
 	background: var(--lighter-background-color);
+	border-radius: 4px;
+}
+
+.skill-list {
+	list-style-type: none;
+	display: flex;
+	padding-left: 0;
+}
+
+.skill-list li {
+	padding: 5px;
+}
+.icon-heading {
+	font-size: 10px;
+	display: flex;
+}
+
+.icons {
+	color: black;
+	padding: 3px;
+	font-size: 30px;
 }
 
 .launch-links {
-	display: flex;
-	border-radius: 4px;
-	padding: 15px 20px;
-	text-decoration: none;
+	padding: 10px;
 	text-transform: capitalize;
 	background-color: var(--space-grey);
-	color: whitesmoke;
-	border: 1px solid var(--space-grey);
+	color: var(--main-background-color);
+	border: 1px solid var(--deeper-blue);
 	transition: all 150ms ease-in-out;
+	margin: 10px auto;
 }
 
 .launch-links:hover {
 	border: 1px solid var(--space-grey);
-	background-color: var(--deep-grey);
-	color: whitesmoke;
+	background-color: var(--lighter-background-color);
+	color: black;
 }
 
 .blurb-image img {
-	background-color: var(--space-grey);
+	background-color: var(--container-background-color);
 	padding: 3px;
+	border-radius: 4px;
 }
 
-.contact-details a,
-.contact-details h4 {
+.contact-details-container a,
+.contact-details-container h4 {
 	font-family: var(--regular-font);
 	text-decoration: none;
 	color: black;
+	font-weight: normal;
 	transition: all 150ms ease-in-out;
+	line-height: 20px;
 }
 
-.contact-details a:hover {
+.contact-details-container a:hover {
 	color: var(--space-grey);
+}
+#contact-details,
+.personal-blurb {
+	padding: 40px 30px;
+}
+.shecodes-link {
+	text-decoration: none;
+	font-style: italic;
+	color: var(--deeper-blue);
 }
 
 footer {
-	margin: 50px 20px;
-	border-top: 1px solid var(--deeper-blue);
+	margin: 30px 40px;
+	border-top: 1px solid var(--container-background-color);
 	padding-top: 20px;
 }
 
@@ -148,14 +182,26 @@ footer i {
 	font-size: 20px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
+	.container {
+		line-height: 30px;
+		padding: 0 20px 30px 20px;
+	}
+
+	.header img {
+		margin-top: 20px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 25px;
+	}
 	.gallery img {
 		display: flex;
 		margin: 10px 20px 10px 0;
-	}
-
-	.header {
-		margin-bottom: 20px;
 	}
 
 	.gallery .img-1:hover {
@@ -172,5 +218,24 @@ footer i {
 	}
 	.cartoon-computer {
 		position: static;
+	}
+
+	.blurb-image img {
+		display: none;
+	}
+	.contact-details-container {
+		line-height: 1;
+		font-size: 15px;
+	}
+
+	.personal-blurb h3,
+	#contact-details h3 {
+		margin-top: 20px;
+	}
+	#contact-details {
+		padding-top: 0;
+	}
+	footer {
+		margin: 20px 30px 40px 30px;
 	}
 }
